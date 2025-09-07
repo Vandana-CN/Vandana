@@ -125,7 +125,7 @@ const eduLogos = {
               <div className="relative rounded-[24px] p-1 bg-white/70 dark:bg-white/10 border border-ink-100 dark:border-white/10 shadow-soft">
                <img
                 // src={profile.photo || "/me.png"}
-                src={profile.photo ||  `${BASE}me.png`}
+                src={profile.photo ||  `${BASE}me.jpg`}
                 alt="Portrait of Vandana Cendrollu Nagesh"
                 className="w-60 h-60 md:w-72 md:h-72 object-cover rounded-[20px]"
                 decoding="async"
