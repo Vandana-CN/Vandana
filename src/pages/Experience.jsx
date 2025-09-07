@@ -4,9 +4,9 @@ import { motion } from 'framer-motion'
 
 const BASE = import.meta.env.BASE_URL;
 const LOGO = {
-  "Entain (formerly Ivy)": `${BASE}logos/Entain.jpg`,
-  "Hexagon": `${BASE}logos/Hexagon.jpg`,
-  "Insight Tutors": `${BASE}logos/Insight.png`,
+  "Entain (formerly Ivy)": `${import.meta.env.BASE_URL}logos/Entain.jpg`,
+  "Hexagon": `${import.meta.env.BASE_URL}logos/Hexagon.jpg`,
+  "Insight Tutors": `${import.meta.env.BASE_URL}logos/Insight.png`,
 };
 export default function Experience() {
   return (

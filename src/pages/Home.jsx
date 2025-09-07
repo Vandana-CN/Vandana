@@ -11,8 +11,8 @@ export default function Home() {
 const BASE = import.meta.env.BASE_URL;
 
 const eduLogos = {
-  "University of Florida, USA": `${BASE}logos/UF.jpg`,
-  "Vellore Institute of Technology – AP, India": `${BASE}logos/VIT.png`,
+  "University of Florida, USA": `${import.meta.env.BASE_URL}logos/UF.jpg`,
+  "Vellore Institute of Technology – AP, India": `${import.meta.env.BASE_URL}logos/VIT.png`,
 };
   return (
     <div>
@@ -86,7 +86,7 @@ const eduLogos = {
               {profile.links.resume && (
                 <a
                   className="btn btn-primary !h-11 !px-5 shadow-soft hover:-translate-y-0.5 leading-none"
-                  href={profile.links.resume ?? `${BASE}resume.pdf`}
+                  href={profile.links.resume ?? `${import.meta.env.BASE_URL}resume.pdf`}
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -125,7 +125,7 @@ const eduLogos = {
               <div className="relative rounded-[24px] p-1 bg-white/70 dark:bg-white/10 border border-ink-100 dark:border-white/10 shadow-soft">
                <img
                
-                src={profile.photo ||  `${BASE}me.jpg`}
+                src={profile.photo ||  `${import.meta.env.BASE_URL}me.jpg`}
                 alt="Portrait of Vandana Cendrollu Nagesh"
                 className="w-60 h-60 md:w-72 md:h-72 object-cover rounded-[20px]"
                 decoding="async"
