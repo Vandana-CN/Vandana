@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="60" viewBox="0 0 180 60">
+  <rect width="180" height="60" rx="8" fill="#0ea5e9"/>
+  <circle cx="30" cy="30" r="14" fill="#0284c7"/>
+  <text x="110" y="35" font-family="Inter, Arial" font-size="18" font-weight="700" fill="#ffffff">Insight Tutors</text>
+</svg>
