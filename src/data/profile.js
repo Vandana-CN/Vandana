@@ -1,6 +1,4 @@
 
-const BASE = import.meta.env.BASE_URL;
-
 export const profile = {
   name: "Vandana Cendrollu Nagesh",
   title: "Full‑Stack Developer",
