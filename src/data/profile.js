@@ -1,11 +1,11 @@
 export const profile = {
   name: "Vandana Cendrollu Nagesh",
   title: "Full‑Stack Developer",
-  photo:"/me.jpeg", 
+  photo:`${BASE}me.jpg`, 
   summary:
     "Master’s student in Computer Science at UF with hands‑on experience across Java/Spring Boot, ASP.NET, and React. Comfortable building end‑to‑end features, improving data workflows with PL/SQL, and shipping clean, accessible UIs. Always learning; focused on reliability and thoughtful design.",
   links: {
-    resume: "/resume.pdf",
+    resume: `${BASE}resume.pdf`,
     linkedin: "https://www.linkedin.com/in/c-n-vandana",
     github: "https://github.com/dashboard",
   },
