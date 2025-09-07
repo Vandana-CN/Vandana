@@ -8,10 +8,12 @@ import { FaLinkedin } from "react-icons/fa";
 
 
 export default function Home() {
-  const eduLogos = {
-    "University of Florida, USA": "/logos/UF.jpg",
-    "Vellore Institute of Technology – AP, India": "/logos/VIT.png",
-  };
+const BASE = import.meta.env.BASE_URL;
+
+const eduLogos = {
+  "University of Florida, USA": `${BASE}logos/UF.jpg`,
+  "Vellore Institute of Technology – AP, India": `${BASE}logos/VIT.png`,
+};
   return (
     <div>
       <section className="section hero-bg bg-gradient-to-b from-brand-50 to-white dark:from-[#0b1020] dark:to-[#0b1020]">
@@ -84,7 +86,7 @@ export default function Home() {
               {profile.links.resume && (
                 <a
                   className="btn btn-primary !h-11 !px-5 shadow-soft hover:-translate-y-0.5 leading-none"
-                  href={profile.links.resume}
+                  href={profile.links.resume ?? `${BASE}resume.pdf`}
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -122,7 +124,8 @@ export default function Home() {
               <div className="absolute -inset-1 rounded-[28px] bg-gradient-to-tr from-brand-600/30 to-accent-500/20 blur-2xl"></div>
               <div className="relative rounded-[24px] p-1 bg-white/70 dark:bg-white/10 border border-ink-100 dark:border-white/10 shadow-soft">
                <img
-                src={profile.photo || "/me.png"}
+                // src={profile.photo || "/me.png"}
+                src={profile.photo ||  `${BASE}me.png`}
                 alt="Portrait of Vandana Cendrollu Nagesh"
                 className="w-60 h-60 md:w-72 md:h-72 object-cover rounded-[20px]"
                 decoding="async"

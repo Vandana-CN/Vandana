@@ -4,8 +4,8 @@ import EduItem from '../components/EduItem.jsx'
 
 export default function Education() {
   const logos = {
-    "University of Florida, USA": "/logos/UF.jpg",
-    "Vellore Institute of Technology – AP, India": "/logos/VIT.png",
+    "University of Florida, USA":import.meta.env.BASE_URL + "/logos/UF.jpg",
+    "Vellore Institute of Technology – AP, India": import.meta.env.BASE_URL + "/logos/VIT.png",
   };
   return (
     <section className="section">

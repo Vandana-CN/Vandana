@@ -2,12 +2,12 @@ import { profile } from '../data/profile'
 import SectionHeader from '../components/SectionHeader.jsx'
 import { motion } from 'framer-motion'
 
+const BASE = import.meta.env.BASE_URL;
 const LOGO = {
-  "Entain (formerly Ivy)": "/logos/Entain.jpg",
-  "Hexagon": "/logos/Hexagon.jpg",
-  "Insight Tutors": "/logos/Insight.png",
+  "Entain (formerly Ivy)": `${BASE}logos/Entain.jpg`,
+  "Hexagon": `${BASE}logos/Hexagon.jpg`,
+  "Insight Tutors": `${BASE}logos/Insight.png`,
 };
-
 export default function Experience() {
   return (
     <section className="section bg-ink-50/40 dark:bg-white/5">
