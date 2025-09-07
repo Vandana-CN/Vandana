@@ -4,11 +4,11 @@ const BASE = import.meta.env.BASE_URL;
 export const profile = {
   name: "Vandana Cendrollu Nagesh",
   title: "Full‑Stack Developer",
-  photo:`${BASE}me.jpg`, 
+  photo:`${import.meta.env.BASE_URL}me.jpg`, 
   summary:
     "Master’s student in Computer Science at UF with hands‑on experience across Java/Spring Boot, ASP.NET, and React. Comfortable building end‑to‑end features, improving data workflows with PL/SQL, and shipping clean, accessible UIs. Always learning; focused on reliability and thoughtful design.",
   links: {
-    resume: `${BASE}resume.pdf`,
+    resume: `${import.meta.env.BASE_URL}resume.pdf`,
     linkedin: "https://www.linkedin.com/in/c-n-vandana",
     github: "https://github.com/dashboard",
   },
