@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]     # change if your default branch isn't 'main'
+    branches: [ main ]
   workflow_dispatch:
 
 permissions:
@@ -27,13 +27,18 @@ jobs:
           node-version: 20
           cache: npm
 
+      # Use npm ci if you have package-lock.json; otherwise use npm install
       - name: Install
-        run: npm ci
+        run: |
+          if [ -f package-lock.json ]; then npm ci; else npm install; fi
 
       - name: Build
-        run: npm run build          # Vite builds to dist/
+        run: npm run build    # Vite outputs to dist/
 
-      - name: Upload build as Pages artifact
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: dist
@@ -41,12 +46,9 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
-
-    # REQUIRED for Pages
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
