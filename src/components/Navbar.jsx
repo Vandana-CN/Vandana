@@ -40,7 +40,7 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           {profile.links.resume && (
           <a
-            href={profile.links.resume}
+            href={`${BASE}resume.pdf`}
             target="_blank"
             rel="noreferrer"
             className="btn btn-primary !h-10 !px-4 shadow-soft hover:-translate-y-0.5"

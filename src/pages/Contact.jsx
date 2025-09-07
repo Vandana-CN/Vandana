@@ -40,7 +40,7 @@ export default function Contact() {
           <div className="card">
             <p className="mb-3 font-medium">Prefer a resume first?</p>
             {profile.links.resume ? (
-              <a className="btn btn-primary" href={profile.links.resume} target="_blank" rel="noreferrer">
+              <a className="btn btn-primary" href={`${BASE}resume.pdf`} target="_blank" rel="noreferrer">
                 View Resume
               </a>
             ) : (
