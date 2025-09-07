@@ -2,6 +2,7 @@ import { profile } from '../data/profile'
 import SectionHeader from '../components/SectionHeader.jsx'
 import EduItem from '../components/EduItem.jsx'
 
+
 export default function Education() {
   const BASE = import.meta.env.BASE_URL;
   const logos = {
