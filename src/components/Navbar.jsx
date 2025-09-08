@@ -17,12 +17,42 @@ const mobileNav = nav.filter(i =>
 
 
 export default function Navbar() {
+
+
   return (
     <header className="border-b border-ink-100/70 dark:border-white/10 bg-white/80 dark:bg-[#0b1020]/70 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-40">
       <div className="container-base flex items-center justify-between h-16">
-        <motion.a href="#/" className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-accent-500" initial={{opacity:0, y:-8}} animate={{opacity:1, y:0}} transition={{duration:.35}}>
+        {/* <motion.a href="#/" className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-accent-500" initial={{opacity:0, y:-8}} animate={{opacity:1, y:0}} transition={{duration:.35}}>
           {profile.name}
-        </motion.a>
+        </motion.a> */}
+
+ <motion.a
+  href="#/"
+  className="inline-flex items-center gap-1 font-extrabold leading-none"
+  initial={{ opacity: 0, y: -8 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.35 }}
+>
+  <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-accent-500">
+    Hi there, welcome!
+  </span>
+
+  <motion.span
+    role="img"
+    aria-label="waving hand"
+    className="text-[1.15rem] text-yellow-400 dark:text-yellow-300 translate-y-[1px] select-none"
+    style={{ display: 'inline-block', transformOrigin: '70% 70%' }}
+    initial={{ rotate: 0 }}
+    animate={{ rotate: [0, 18, -10, 18, 0] }}
+    transition={{ duration: 1.6, repeat: Infinity, repeatDelay: 2 }}
+  >
+    👋
+  </motion.span>
+</motion.a>
+
+
+
+
         <nav className="hidden md:flex gap-6">
           {nav.map((item) => (
             <NavLink
