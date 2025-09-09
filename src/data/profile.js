@@ -8,7 +8,7 @@ export const profile = {
   links: {
     resume: `${import.meta.env.BASE_URL}resume.pdf`,
     linkedin: "https://www.linkedin.com/in/c-n-vandana",
-    github: "https://github.com/dashboard",
+    github: "https://github.com/Vandana-CN",
   },
   contact: {
     email: "cnvandana@gmail.com",
